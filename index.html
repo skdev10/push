@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // Ternary Operator
+    let age = 14;
+    let drink = age <= 20 ? "Coffee":"Milk";
+    console.log(drink);
+
+    // Break and Continue
+    for(let i = 0; i<=10;  i++){
+      if (i==3) {
+        break;
+      }
+      console.log(i);
+    }
+
+    for(let i  = 0; i<=10; i++){
+      if(i===4){
+        continue;
+      }
+      console.log(i);
+    }
+
+    // Object Destruction
+    // const band = {
+    //   bandName : "Azaad",
+    //   year:"1987",
+    //   famousSong : "kashmir",
+    //   anotherSong : "world"
+    // }
+    // let {bandName, famousSong, ...restprops} = band;
+    // console.log(bandName);
+    // console.log(...restprops);
+
+    // Array Destruction 
+      const Array = ["val1", "val2", "val3", "val4", "val5"];
+      let [ var2, var3, ...myNewArray]  = Array;
+
+      console.log("The Geometry Value is", var2);
+      console.log(myNewArray);
+  
+    // Difference Between Dot and Bracket;
+    let key = "email";
+    const shop = {
+      name:"Shaziab Khan",
+      age:18,
+      is_verified : true,
+      "grocery": ["Products", "Toys", "Games", "Shoes"]
+    }
+
+    console.log(shop["grocery"]);
+    shop[key] = "mshazaibkhan963@gmail.com";
+    console.log(shop);
+
+    // hositing 
+
+    // abcd();
+
+    // var const = function(){
+    //   console.log("Hello World");
+    // }
+    
+    // Foreach Loop 
+    let songs = ["a","b","c","d","e","f","h","i","g"];
+    
+    songs.forEach(function(){
+      console.log("this is very famouse",songs[7]);
+    })
+
+    let a = [1,2,3,4,5,6,7,8,9,10];
+
+    a.forEach(function(val){
+      console.log(val+2);
+    })
+
+    // forin loop
+    let obj = {
+      name:"Shazaib khan",
+      age:31,
+      is_verified:true
+    }
+    for(let key in obj){
+      console.log(key, obj[key]);
+    }
+  
+    // for of loop
+    let obj2 = ["apple","bananan","mango","orange","pineapple"];
+    let obj3 = [];
+
+    for (const obj of obj2) {
+      obj3.push(obj.toUpperCase());
+    }
+    console.log(obj3);
+
+    // lexical scope  CLOSURES
+    function app(){ 
+      const myVar = 78;
+      function bisc(){
+        const myVar = 89;
+        console.log("The Value is",myVar);
+      }
+      console.log(myVar);
+      bisc();
+    }
+    app();
+
+    // Constructor Classes
+    function circularbutton(color){
+      this.width = 23;
+      this.height = 24;
+      this.radius = 2;
+      this.color = color;
+    }
+     var redbtn = new circularbutton("red");
+     var greenbtn = new circularbutton("green");
+
+    // Callback Function
+    function myFunc2(name){
+    console.log("inside my func 2")
+    console.log(`your name is ${name}`);
+  }
+
+  function myFunc(callback){
+    console.log("hello there I am a func and I can..")
+    callback("harshit");
+  }
+  myFunc(myFunc2);
+
+  // OOps
+  // Class and object
+  // Object And Methods
+  class employeee{
+    constructor(){
+      let name3;
+      console.log('Hello Construction function');
+    }
+    message(){
+      console.log("Hello Friends Here is super Duper Faculty",this.name3);
+    }
+    sorry(){
+      console.log("Sorry I have Tried");
+    }
+  }
+  let g = new employeee();
+  g.name3 = "Shazaib khan";
+  g.message();
+  g.sorry();
+
+  // Example
+
+    class student{
+      constructor(name,age){
+        this.name = name;
+        this.age = age;
+        console.log("Hello Good Morning sir");
+      }
+      message(){
+        console.log(`I have Done Attendance ${this.name} And Your Age is  ${this.age}`);
+      }
+      sorry(){
+        console.log("I had put in Effort in js");
+      }
+      static btn(){
+        console.log("Static Function");
+      }
+    }
+    let con = new student("Shazaib khan",23);
+    let con2 = new student("Shahmeer Khan",21);
+    con.message();
+    con2.message();
+    student.btn();
+    con.sorry();
+
+
+    // ........................................................Example3...................
+    function bankaccount(cusname,balance = 0){
+        this.cusname = cusname;
+        this.accountNumber = Date.now();
+        this.balance = balance;
+      
+
+        this.deposit = function(amount){
+          this.balance += amount;
+        }
+
+        this.withdraw = (amount) => {
+          this.balance -= amount;
+        }
+    
+      }
+    const sk = new bankaccount("Shazaib khan",1000);
+    sk.deposit(1000);
+    sk.withdraw(500);
+    const sk2 = new bankaccount("Shariq Khan");
+   console.log(sk, sk2);
+
+  //  CallBack and promise
+
+  function register(){
+    console.log("Register End")
+  }
+function sendEmail(){
+  console.log("Email End")
+}
+function login() {
+  console.log("login End")
+}
+function getUserData(){
+  console.log("Got User Data End");
+  
+}
+function displayUserData(){
+  console.log("User Data Display");
+}
+
+register();
+sendEmail();
+login();
+getUserData();
+displayUserData();
+console.log("Other Application");
+
+
+
+
+
+    // Class Inheritance
+    class employee{
+      constructor(name){
+        console.log("Constructor : Employee " + name);
+      }
+    }
+    class manager extends employee{
+      // constructor(){
+      //   super()
+      //   console.log("Constructor : Employee ");
+      // }
+    }
+    let o = new manager("Shazaib khan");
+
+    // Exaample
+    class faculty{
+      constructor(name1,age, salary){
+        this.name1 = name1;
+        this.age = age;
+        this.salary = salary;
+        console.log("Second  :  Constructor ");
+      }
+      info(){
+        document.write(`<h2>Employee Class</h2> 
+                    Name : ${this.name1} <br>
+                    Age: ${this.age}     <br>
+                    Salary: ${this.salary}  <br> `);
+      }
+    }
+    class teacher extends faculty{
+      info(){
+        let ta = 13000;
+        let pa = 400;
+        let totalsalary = this.salary + ta + pa;
+        document.write(`<h2>Manager Class</h2> 
+                    Name : ${this.name1} <br>
+                    Age: ${this.age}     <br>
+                    Salary: ${totalsalary}  <br> `);
+      }
+
+      // info(){
+      //   super.info();
+      //   console.log("Manager Name",this.name1);
+      // }
+    }
+    let op = new faculty("Shazaib Khan",25, 40000);
+    let p = new teacher("Shazaib Khan",25, 40000);
+    p.info();
+    op.info();
+ 
+    // Example
+       
+    class gangster{
+      constructor(name, age, rob){
+        this.name = name;
+        this.age = age;
+        this.rob = rob;
+        console.log("This is Crime Database Management");
+      }
+      crime(){
+        document.write(`<h1>Criminal Report</h1>
+                    Name  : ${this.name} <br>
+                    Age   : ${this.age} <br>
+                    Robbery : ${this.rob} <br> `);
+      }
+    }
+    class criminal extends gangster{
+      crime(){
+        let an = 890000;
+        let al = 900000;
+        let totalrobbery = this.rob + an + al;
+        document.write(`<h1>Another Criminal Report</h1>
+                    Name  : ${this.name} <br>
+                    Age   : ${this.age} <br>
+                    Robbery : ${totalrobbery} <br> `);
+      }
+    }
+
+    let pi = new gangster("Andrew Finch",67, 800000); 
+    let i = new criminal("Andrew Finch",67, 800000);
+    i.crime();
+    pi.crime();
+
+    // Example
+    class Bank{
+      constructor(name, salary,age){
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        console.log("Construction :Function");
+      }
+      info(){
+        document.write(`<h1>North Data Report</h1> <br>
+          Name : ${this.name} <br>
+          Age : ${this.age} <br>
+          Salary : ${this.salary} 
+        `);
+      }
+    }
+    class Transaction extends Bank{
+      info(){
+        let ta = 90;
+        let al = 87;
+        let totalEarn  = this.salary + ta + al;
+        document.write(`<h1>Another Data Report</h1> <br>
+          Name : ${this.name} <br>
+          Age : ${this.age} <br>
+          Salary : ${totalEarn} 
+        `);
+      }
+    }
+    let y = new Bank("Anum Khan", 23000, 12);
+    let b = new Transaction("Shazaib Khan", 80000, 21);
+    y.info();
+    b.info();
+
+    // Modules
+    // Asynchronus and Synchronus
+    // sync matalb ek ke bad dusre hoga jab tak ek command complete naa ho,dusra shuru nhi hoga
+    
+
+    // task a = 5
+    // task b = 2
+    // task c = 15
+    // task d = 1
+    // async matlab saare kaam ek saath shuru kardo,jiska answer pahle aajuye uska jawaab dedena
+
+    console.log("Hey");
+    setTimeout(function(){
+      console.log("Hello World");
+    },2000);
+    console.log("Hey2");
+
+    // Example
+
+    setTimeout(function(){
+
+    },1000)
+
+    // setinterval
+    // settimeout
+    // promise
+    // fetch
+    // axios
+  
+  // then catch 
+  // async await 
+  // callbacks
+
+  // Callback humesha ek function hota hai, ye sirf 
+  
+  // Promise Syntax
+    let complete = true;
+    let prom = new Promise(function(resolve,reject){
+      if(complete){
+        resolve("I am successfull");
+      }else{
+        reject("I am Failed");
+      }
+    });
+  
+    console.log(prom);
+
+    // Promise function
+    function prom1(complete){
+      return new Promise(function(resolve,reject){
+      if(complete){
+        resolve("I am successfull");
+      }else{
+        reject("I am Failed");
+      }
+    });
+    }
+
+    let onFull = (result) => {
+      console.log(result);
+    }
+
+    let onReject = (error) =>{
+      console.log(error);
+    }
+
+    promp1(true).then(onFull);
+    promp1(true).catch(onReject);
+
+
+    
+  </script>
+</body>
+</html>
