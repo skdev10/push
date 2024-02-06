@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xml http Request</title>
+</head>
+<body>
+    <script>
+        // Ajax data fetch server data
+        const url = 'https://jsonplaceholder.typicode.com/users';
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET',url);
+        // xhr.
+
+        xhr.onload=()=>{
+            if(xhr.status >= 400){
+                 console.log('Error!!');
+            }else{
+                console.log(xhr.response);
+            }
+
+        }
+
+        xhr.onerror=()=>{
+            console.log('Error!!!');
+
+        }
+        xhr.send();
+    </script>
+</body>
+</html>

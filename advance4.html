@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        // Rest Operator
+        // function sum(a,b,c,d,e,r,y){
+        //     console.log(a+b+d+e+r+y);
+        // }
+        // sum(10,5,8,3,6,9,3);
+
+        
+        // function sum(name, course, ...args){
+
+        //     console.log(arguments);
+
+        //     document.write(`Your Name is ${name} Your course is ${course} `)
+
+        //     let sum = 0;
+
+        //     for (let i in args) {
+
+        //        sum += args[i];
+
+        //     }
+        //     document.write(sum,"<br>");
+
+        // }
+
+        // sum("Shazaib Khan","Python",10,50,90);
+        // sum("Hassan Khan","Rest",80,40,80);
+        // sum("Hammad Khan","HTML5",70,40,900);
+        // sum("Hassan Khan","Rest",80,40,80);
+        // sum("Hassan Khan","Rest",80,40,80);
+ 
+
+        // Spread Operator
+
+        function sum(name,course,args){
+        console.log(arguments);
+
+        document.write(`Hello ${name} of ${course}: `);
+        let sum = 0; 
+        for (let a in args) {
+            sum += args[a];
+          }
+          document.write(sum + "<br>");
+        }
+
+        var a = [10,80,90];
+        sum("shaziab khan","Python", a);
+
+        // ...Rest 
+        // TERNARY GUARD DEFAULT SPREAD REST Operator 
+
+        // REGEX
+        
+
+        // context manual and Lexical Envoirment
+        // function setting(){
+        //     var a = 40;
+        //     function setting2(){
+        //         // var a = 50;
+        //         console.log("My VALUE IS",a);
+        //     }
+        // console.log(a);
+        // setting2();
+        // }
+        // setting();
+
+
+        // function games(){
+        //     var b = "subway surfer";
+        //     function extraGames(){
+        //         var c = "Temple Run";
+        //         console.log("You are Play",c);
+        //     }
+        // console.log(b);
+        // // extraGames();
+        // }
+        // games();
+        // extraGames();
+
+        // Constructor
+        // Lines of CODE
+        function remote(name,color){
+            this.width = 2;
+            this.height = 4;
+            this.color = color,
+            this.name = name;
+        }
+        
+        let greenbtn = new remote("Toshiba","green"); 
+        let redbtn = new remote("Picaso","red"); 
+        let yellowbtn = new remote("Toshiba","yellow"); 
+        let graybtn = new remote("Toshiba","gray"); 
+        let blackbtn = new remote("Toshiba","black"); 
+   
+        // Example
+        function BankAccount(customerName, balance = 0){
+            this.customerName = customerName;
+            this.balance = balance;
+            this.accountNumber = Date.now();
+
+            this.deposit = function(amount){
+                this.balance += amount;
+            }
+            this.withdraw = function(amount){
+                this.balance -= amount;
+            }
+        }
+    
+        let sk = new BankAccount("Shazaib khan",1000);
+        sk.deposit(20000);
+        sk.withdraw(500);
+        let ramsha = new BankAccount("Ramsha");
+
+        // function BankAccount(customerName,balance = 0){
+        //   this.customerName = customerName;
+        //   this.accountNumber = Date.now();
+        //   this.balance = balance;
+
+        //   this.deposit = function(amount){
+        //     this.balance += amount;
+        //   }
+
+        //   this.withdraw = function(amount){
+        //     this.balance -= amount
+        //   }
+        // }
+        // let sk = new BankAccount("Shazaib Khan",1000);
+        // let gk = new BankAccount("Gamer Khan")
+        // sk.deposit(5000);
+        // sk.withdraw(200);
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

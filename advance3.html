@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" onclick="add()">Add to Cart</button>
+    
+    <!-- .................. -->
+    
+    <button type="button" onclick="two()">+2</button>
+
+
+
+    <!-- ............................. -->
+    <button type="button"  onclick="three()">+3</button>
+
+
+
+
+    <!-- ........................... -->
+    <button type="button" onclick="reset()">Reset Quantities</button>
+
+
+    <!-- ......... -->
+    <p id="cartsummary"></p>
+
+    <script>
+        // Variebles
+        // var let const
+
+        // difference var let and Const
+
+
+        // Operators 
+        // logical Assignment relational arithmetic
+
+        // events 
+        // window onclick ondbclick
+        // dom 
+
+        // Print
+        // document.write();
+        // console.log();
+        // docuemnt.body.innerhtml
+        // document.body.innerContext
+
+        // CASES
+        // pascal case kabab case camel case snake case
+
+        // camel case variebls ya functions 
+        let cartQauntity = 0;
+
+        function add(){
+            cartQauntity += 1;
+    console.log(`Your Quantity is ${cartQauntity} `)
+        }
+        function two(){
+            cartQauntity += 2;
+    console.log(`Your Quantity is Double ${cartQauntity} `)
+
+        }
+        function three(){
+            cartQauntity += 3;
+    console.log(`Your Quantity is Triple ${cartQauntity} `)
+        }
+
+        function reset(){
+            cartQauntity--;
+    console.log(`Your Reset Cart ${cartQauntity} `)
+
+        }
+
+        // Conditions 
+        // IF else 
+        // else if
+        // switch  
+        // nested if
+
+
+        // builtin  Functions
+        // Prompt
+        // alert
+        // confirm
+
+        // 12 15  18 19 555
+        
+        // JSON parse json stringify
+        // Strings Number Convert ParseInt digits
+        // Short Code
+        // Either Or 
+        // let age  = +prompt('Enter Your Age');
+        // if (age>=18) {
+        //     alert('You Can Drink Coffee')
+        // }else{
+        //     alert('You Can Drink Milk')
+        // }
+
+        // grade finder
+        // ||  OR and && Operator
+        // let per = prompt('Enter Your Marks');
+        // if (per>=100 || per<=90) {
+        //     alert('You GOT A+')
+        // } else if(per>=90 || per<=80) {
+        //     alert('You Got A')
+        // }else{
+        //     alert('Invalid Marks')
+        // }
+        
+        // season finder
+        // Switch 
+
+        // let employee = "Kashan";
+        // switch (employee) {
+        //     case "Kashan":
+        //         alert('Kashan Attendance')
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
+
+        // Ternary Operator 
+        // let age = prompt('Enter Your Age');
+        // let chacha = age>=18 ? 'Coffee': 'Milk';
+        // alert(drink);
+
+        // Guardd Operator 
+        // let age = 18;
+        // let final = age || 18;
+        // alert(final);
+
+        // Default Operator; null 
+
+        // let age1;
+        // let final1 = age ?? 18;
+        // console.log(final1);
+
+
+
+
+
+        // Word Or Keyword
+        // Chacha || if else 
+
+
+        // Function 
+        // Return 
+        // Simple
+        // Arrow Functions
+
+
+
+        // Object & array
+        // Composite Data Types
+        let obj = {
+            name:"Shaziab Khan",
+            age:12,
+            is_verified : true,
+            'deliverytime' : 'FoodPanda is On Road',
+            scroll : false
+        }
+        obj.cnic = '42897668489';
+        
+        document.getElementById("cartsummary").innerHTML =  obj.name + " " + obj.cnic + "" + obj.deliverytime;
+
+        // Bracket Notation
+        console.log(obj['deliverytime']);
+
+
+        // Object Destruction 
+        let band = {
+            artist:"Atif",
+            song:"Ek pal",
+            famousSong: "pheli dafa",
+            price:'60M',
+            donation: '15M',
+        }
+        // Object Rules 
+        // dESTRUCTION 
+        let{artist,famousSong , ...chacha} = band;
+        console.log(artist);
+        console.log(chacha);
+
+
+        // How to Copy Reference Value
+        let a = ["banana","Apple","orange","Pineapple"];
+        let b = [...a];
+        
+        a.pop();
+        console.log(a);
+
+        // Functions 
+        // console.log(`My age is ${age}`);
+
+        // age = 56;
+        // console.log(`My age is ${age}`);
+        //  age = 78;
+        // console.log(`My age is ${age}`);
+
+        // functions 
+        // function Short Code
+        // case sensative
+        // CamelCase
+        let age = 14;
+        function myAge(){
+            console.log(`My age is ${age}`);
+        }
+        myAge();
+        age = 89;
+        myAge();
+        age = 90;
+        myAge();
+
+        // function sum(a,b,c,d){
+        //     alert(a+b+c+d);
+        // }
+        // sum(10,50,60,90);
+
+
+        // arrow functions
+        // let c = (a,b,c,d)=>{
+        //     alert(a+b+c+d);
+        // }
+        // c(6,8,9,0);
+
+        // Return Function
+
+        // let d = (a,b,d,e)=>{
+        //     return a-b/d*e;
+        // }
+        // console.log(d(8,9,7,5));
+
+
+        // LOOPS
+        // For 
+        // While do-while
+        
+        // WHILE pagination
+        // 1 2 3 4 5 
+            // Relational Operators
+            // >= <= > < !=
+            // let text = "";
+            // let i = 0;
+            // while (i < 10) {
+            //     text += "The number is " + i;
+            //     i++;
+            //     console.log(text);
+            // }
+            // for loop
+            // for(var i = 0; i<=10 ; i++){
+            //     console.log(i);
+            // }
+            // console.log(i);
+
+            // For Each
+
+            // jaha array nazar aye or apne
+            //  ek bad ek varibel ko add ko karna to foreach
+            // foreach array
+
+
+            // jargan Free 
+            // open minded
+            // recuriters Jo apse Interview Lete hai
+
+            // eval evalaute 
+            // first Class Function fcf
+            let per = [10,90,40,50,70];
+            per.forEach(function(val){
+                console.log(val+2);
+            });
+            
+            // for in loops jaha apko nazar ajaye object
+            // waha for in loop
+            // let obj1 ={
+            //     name:"Shaziab kahn",
+            //     age:12,
+            //     is_verified:true,
+            // }
+            // obj1.cnic = "32423423423";
+
+            // for(const key in obj1){
+            //     document.write(key,obj1);
+            // }
+            // document.write(obj1.name + "" + obj1.age)
+
+
+            // for of 
+            // for of array 
+            // let band2 = ["baja","paino","parizad"];
+            // let band3 = [...band2];
+
+            // band2.pop();
+            // band2.push('humrah');
+            
+            // let fruits = ['banana','pineapple','apple','grapes'];
+            // let fruits2= [];
+
+            // for (const i of fruits) {
+            //     fruits2.push(i);
+            // }
+
+            // Break and Continue
+
+            for(let i=0;i<10;i++){
+                if(i==4000){
+                    continue;
+                }
+                console.log(i);
+            }
+            // truthy and falsy 
+            // datatypes
+            // falsy  0 NAN document.all null undefined false
+            if(''){
+                console.log('hey');
+            }else{
+                console.log('sorry');
+            }
+
+            // practice set 
+            // object
+
+            // Object Destruction 
+            // array destruction
+            const obj1={
+                    name:"shazaib-khan",
+                    dob:"22-03-2023",
+                    mobile:"7545454"
+                }
+
+           
+             
+            // obj1.name = "Ayesha MANOOOS with Chamar Cousin";
+            obj1.dob = "5456456456";
+            console.log(obj1);
+
+
+            // iife
+            // wo function jo call hota ek dafa phir use karte hain 
+            (function add(a){
+                console.log(a);
+            })(10);
+
+            add(10);
+         
+            // let pro1 = {
+            //     name:"Myntra bag",
+            //     price:"300$",
+            //     quality:"Leather kapra",
+            //     stock:900,
+            //     statuscode:300,
+            //     export:"gwadar",
+            //     import:"karachi"
+            // }   
+            // // Array fucntions
+            // pro1.name = "Qasim Bag";
+            // document.write("Your Bag Name is:",pro1.name + 'Your Bag Price is:',pro1.price);
+
+            // Object Destructions
+            // let {name,price,...pro2} = pro1;
+            // document.write("Your Bag Name is:",name + "" + 'Your Bag Price is:',price);
+            // console.log(pro2);
+
+            // Array destruction
+            let fruits = ["Banana","Apple","pineapple","freshup","closup","kino","chiku"];
+
+            let[chacha1,chacha2, ...h] = fruits;
+            
+            document.write("Your bought:",chacha1);
+            console.log(h);
+            
+
+            // IIFE
+            // immediately invoked function expression
+            // iife function ye hota hai jo sirf ek bar chale uske bad invoked nhi hoga
+            // (function iif(a){
+            //     console.log(a);
+            // })(5);
+
+            // iife(6);
+
+
+            // regex  Patterna matches 
+            // ARRAY fUNCTION
+            // pop 
+            // push
+            // concat
+            // join
+
+
+            // Lexical Enviorment 
+            // Contetxtual Manaul
+          function setting(){
+            var app = "Subway Surfer";
+            function setting2(){
+                // var app = "Temple Run";
+                console.log("You Are Play Now",app);
+            }
+            console.log(app);
+            setting2();
+          }
+          setting();
+
+                
+        //   form validation 
+        //     regex pattern 
+            // constructor
+
+
+            // Object 
+
+        //     let pro ={
+        //         name :"Shazaib khan",
+        //         age:12,
+        //         dob:"23-10-2023"
+        //     }
+        //     pro.name = "ahsan khan";
+
+        //     const propertydiscriptor = {
+        //         value:pro.name = "Shazaib Khan",
+        //         writable : false
+        //     }
+        //    Object.defineProperty(pro,"name",propertydiscriptor);
+            
+
+            // function 
+            // function sum(a,b,c,d,e,f,g,h){
+            //     alert(a+b)
+            // }
+            // sum(10,8,83,4);
+
+            // Rest Operator
+
+         
+    //   function sum(name,course, ...args){
+    //     console.log(arguments);
+
+    //     document.write(`Hello ${name} of ${course}: `);
+    //     let sum = 0; 
+    //     for (let a in args) {
+    //         sum += args[a];
+    //       }
+    //       document.write(sum + "<br>");
+    //     }
+    //     sum("shaziab khan","Python",10,20,50,60,70);
+
+
+
+</script>
+
+
+</body>
+</html>

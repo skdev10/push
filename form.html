@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="accountForm">
+        <input type="text" placeholder="Customer Name" id="customerName">
+        <input type="number" placeholder="Your balance" id="balance">
+        <button >Create Your Account</button>
+    </form>
+
+
+    <script>
+        function BankAccount(customerName, balance = 0){
+            this.customerName = customerName;
+            this.balance = balance;
+            this.accountNumber = Date.now();
+
+            this.deposit = function(amount){
+                this.balance += amount;
+            }
+            this.withdraw = function(amount){
+                this.balance -= amount;
+            }
+        }
+    
+        // let sk = new BankAccount("Shazaib khan",1000);
+        // sk.deposit(20000);
+        // sk.withdraw(500);
+        // let ramsha = new BankAccount("Ramsha");
+
+
+
+
+
+
+
+
+        const accountForm = document.querySelector('#accountForm');
+        const customerName = document.querySelector('#customerName');
+        const balance = document.querySelector('#balance');
+
+        accountForm.addEventListener('submit',(e)=>{
+          e.preventDefault();
+          console.log(customerName.value, balance.value);
+        });
+    </script>
+</body>
+</html>

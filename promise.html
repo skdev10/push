@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      function register(){
+      return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+        console.log("Register End");
+        resolve();
+        },1000);
+      })
+      }
+      function email(){
+        return new Promise((resolve, reject) => {
+          setTimeout(()=>{
+          //  return reject("Error Displaying Fetch");
+          console.log("Email End");
+          resolve();
+          },5000);
+        })
+       
+      }
+     function login(){
+      return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+          console.log("Login End");
+          resolve();
+        },3000);
+      })
+     }
+     function userData(){
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("User Data End");
+          resolve();
+        }, 2000);
+      })
+     }
+     function display(){
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("Display Data End");
+          resolve();
+        }, 1000);
+      })
+     }
+
+      
+
+
+
+     
+    //   register()
+    //   .then(email)
+    //   .then(login)
+    //  .then(userData)
+    //  .then(display)
+    //  .catch((err) =>{
+    //   console.log('ALERT', err);
+   
+
+    // async function xyz(){
+    //   try{
+    //     await register();
+    //   await email();
+    //   await login();
+    //   await userData();
+    //   await display();
+    // }catch(err){
+    //   console.log(err);
+    // }
+    //   }
+      
+    // authenticate().then(()=>{
+    //   console.log("All Set!");
+      
+    // })
+
+    async function xys(){
+      try{
+      await register();
+      await email();
+      await login();
+      await userData();
+      await display();
+      }catch(err){
+        console.log('alert',err);
+      }
+    }
+
+    xys().then(()=>{
+      console.log("All Set");
+    });
+    
+    </script>
+</body>
+</html>

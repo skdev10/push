@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function myAxios(method,url,body = null){
+        
+            let xhr = new XMLHttpRequest();
+         xhr.responseType = 'json';
+         xhr.open(method,url);
+        xhr.setRequestHeader('Content-type','application/json')   
+        
+        xhr.onload= ()=>{
+            if(xhr.status>=400){
+            console.log('Error');
+            }else{
+            console.log(xhr.response);
+            }
+        }
+
+        xhr.onerror=()=>{
+            console.log('Error!!!!')
+        }
+        xhr.send(JSON.stringify(body));
+        }
+
+        const url = 'https://jsonplaceholder.typicode.com/users';
+
+        myAxios('POST',url,{
+            name:"Shazaib khan",
+            job:"Software Engineer",
+             name:"Shazaib khan",
+            job:"Software Engineer"
+        });
+    </script>
+</body>
+</html>

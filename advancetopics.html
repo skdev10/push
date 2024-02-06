@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- internal css -->
+    <!-- external css -->
+    <!-- inline css -->
+    
+    <p style="background-color:red">Shazaib khan</p>
+
+
+
+
+    <script>
+        // Object  { }
+        // Array [ ]
+
+        // let daraz = {
+        //     name:"Shazaib Khan",
+        //     age:12,
+        //     price:"3000$",
+        //     statusCode:7000,
+        //     statusResponse:4000,
+        //     import:'5000$',
+        //     export:"Qasim port",
+        //     ExpiryDate:"13-08-2",
+        //     container:"4000$"
+        // }
+        // document.getElementById("demo").innerHTML = daraz.name;
+        // let {name, age, price, ...pro} = daraz;
+        // document.getElementById("demo").innerHTML = name + age + price;
+        // console.log(pro);
+
+        // // Array 
+        // let fruits = ['Banana','apple','pineapple','kino','chiku','ananas'];
+        // let fruits2= [...fruits];
+
+        // fruits.pop();
+
+        // console.log(fruits[0]);
+
+        // iife
+        // Immediately Invoked Function Expression
+
+        // function app(a,b){
+        //     console.log(a+b)
+        // }
+        // app(3,8);
+
+        // app(4,9);
+
+
+        (function app(a){
+            console.log(a)
+        })(8);
+
+        // app(9);
+
+        // Hoisting
+        abcd(4,9);
+        function abcd(a,b){
+            console.log(a*b);
+        }
+
+
+        // DOM
+        // 4 Pillars Destroyed 
+        // Select and element
+        // Changing an Html
+        // Changing an Css
+        // Event Listener
+
+        // let a = document.querySelector("p");
+        // console.log(a);
+
+        // Changing an HTML
+        // .innerHTML 
+        // html 
+        // .textcontext
+        // javascrript is a instruction that computer have to must follow  or Code
+
+        let b = document.querySelector("p");
+        // b.innerHTML = "London Gone";
+        // b.style.backgroundColor = "blue";
+        // b.style.color = "white";
+
+
+        // Event Listener 
+        // Mouse Event  click dblclick mouseover submit  
+        // Add event listner 
+
+        // First Class Functions 
+        // for Each 
+        // foreach()
+
+        b.addEventListener("click",function(){
+            b.innerHTML = "London Gone";
+        b.style.backgroundColor = "blue";
+        b.style.color = "white";
+
+        })
+
+
+
+        // Context  Manual and Lexical Envoirnments Scope 
+        // Block Scope Function Scope 
+
+        function setting(){
+            var a = "Submway Surfer";
+            function setting2(){
+                // var a = "Temple Run";
+                console.log("You are Play now",a)
+            }
+            console.log(a);
+            setting2();
+        }
+        setting();
+</script>
+</body>
+</html>

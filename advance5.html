@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" id="accountForm">
+        <input type="text" id="customerName" placeholder="Customer Name">
+        <input type="text" id="balance" placeholder="Balance">
+        <button>Create Your Account</button>
+    </form>
+
+    <script>
+        // function sum(name,course,args){
+        // console.log(arguments);
+
+        // document.write(`Hello ${name} of ${course}: `);
+        // let sum = 0; 
+        // for (let a in args) {
+        //     sum += args[a];
+        //   }
+        //   document.write(sum + "<br>");
+        // }
+        // var arr = [10,20,30]
+        // sum("shaziab khan","Python", arr);
+
+
+
+        // function abcd(name, course,...args){
+        //     console.log(arguments);
+
+        //     document.write(`Your Name is ${name}`)
+        //     let sum  = 0 ;
+        //     for (let  i in args) {
+        //       sum += args;
+        //     }
+        //     document.write(sum+"<br>");
+        // }
+        // abcd("shazaib khan","python",10,90,80,70);
+
+        // Constructor 
+
+        // function remote(customername,color){
+        //     this.customername =customername,
+        //     this.width = 2,
+        //     this.height = 4,
+        //     this.color = color
+        // }
+        // let redbtn = new remote("toshiba","green");
+
+        
+        // BANK ACCOUNT
+        function bankAccount(customerName, balance = 0){
+            this.customername = customerName;
+            this.balance = balance;
+            this.accountNumber = Date.now();
+
+
+            this.deposit = function(paisa){
+                this.balance += paisa;
+            }
+            this.withdraw = (paisa)=>{
+                this.balance -= paisa;
+            }
+        }
+        let sk = new bankAccount("Shazaib khan",1000);
+        sk.deposit(5000);
+        sk.deposit(1000);
+        sk.withdraw(200);
+
+        const accounts = [];
+        const accountForm = document.querySelector("#accountForm");
+        const customerName = document.querySelector("#customerName");
+        const balance = document.querySelector("#balance");
+
+
+        accountForm.addEventListener('submit',(e)=>{
+            e.preventDefault();
+
+            const account = new bankAccount(customerName.value, balance.value);
+            accounts.push(account);
+            console.log(accounts);
+        })
+    </script>
+</body>
+</html>

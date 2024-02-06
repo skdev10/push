@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="accountForm">
+        <input type="text" id="customerName">
+        <input type="number" id="balance">
+        <button>Create Account</button>
+    </form>
+
+
+    <form action="" id="depositForm">
+        <input type="number" id="accountNumber">
+        <input type="number" id="amount">
+        <button>Deposit</button>
+    </form>
+    <script>
+        function bankAccount(customerName, balance = 0){
+            this.customerName = customerName,
+            this.accountNumber = Date.now();
+            this.balance = balance;
+            
+            this.deposit = function(amount){
+                this.balance += amount;
+            }
+
+            this.withdraw = function(amount){
+                this.balance -= amount;
+            }
+        
+        }
+
+        let sk = new bankAccount("Shazaib khan",1000);
+        let ramsha = new bankAccount("Ramsha");
+        sk.deposit(2000);
+        sk.withdraw(500); 
+
+        const accounts = [];
+        const accountForm = document.querySelector("#accountForm");
+        const customerName = document.querySelector("#customerName");
+        const  balance= document.querySelector("#balance");
+       
+        accountForm.addEventListener('submit',(e)=>{
+            e.preventDefault();
+
+            const account = new bankAccount(customerName.value, balance.value);
+           
+            accounts.push(account);
+            console.log(accounts);
+        });
+    </script>
+</body>
+</html>
